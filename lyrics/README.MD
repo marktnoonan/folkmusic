@@ -7,11 +7,11 @@ This is a basic lyris search feature as seen on folkmusic.com. There are are var
 
 ## TODOs
 
-1. Song titles should not be links, they should be button elements. Currently the titles are not keyboard-focusable because they are links with no hrefs!
-2. Song titles should have cursor: pointer even after switched to buttons.
-3. The escape key should close a song if one is open.
-4. The close button should not be a span, it should be a pbutton element.
-5. The close button should receive focus when the lyrics are being shown.
+-[ ] Song titles should not be links, they should be button elements. Currently the titles are not keyboard-focusable because they are links with no hrefs!
+-[ ] Song titles should have cursor: pointer even after switched to buttons.
+-[ ]The escape key should close a song if one is open.
+-[ ] The close button should not be a span, it should be a button element.
+-[ ] The close button should receive focus when the lyrics are being shown.
 
 To get this running locally, you should be able to open index.html and everything will be there. The CSS file contains practically all the CSS for the whole site just so stuff looks the same on this isolated version.
 
