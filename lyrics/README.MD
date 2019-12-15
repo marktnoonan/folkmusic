@@ -9,7 +9,7 @@ This is a basic lyris search feature as seen on folkmusic.com. There are are var
 
 - [ ] Song titles should not be links, they should be button elements. Currently the titles are not keyboard-focusable because they are links with no hrefs!
 - [ ] Song titles should have cursor: pointer even after switched to buttons.
-- [ ]The escape key should close a song if one is open.
+- [ ] The escape key should close a song if one is open.
 - [ ] The close button should not be a span, it should be a button element.
 - [ ] The close button should receive focus when the lyrics are being shown.
 
