@@ -7,16 +7,16 @@ var context = {};
 
       function pushHandlebars(contentType, contentIndex, contentKey) {
         if (contentType === "results") {
-          var source = document.querySelector("#lyrics-results-template").innerHTML;
-          var template = Handlebars.compile(source);
-          var html = template(context);
+          let source = document.querySelector("#lyrics-results-template").innerHTML;
+          let template = Handlebars.compile(source);
+          let html = template(context);
 
           document.querySelector("#lyrics-titles").innerHTML = html;
         } else if (contentType === "song") {
           console.log("pushing a song");
-          var source = document.querySelector("#lyrics-content-template").innerHTML;
-          var template = Handlebars.compile(source);
-          var html = template(context.lyricsByFirstLetterOfTitle[contentKey][contentIndex]);
+          let source = document.querySelector("#lyrics-content-template").innerHTML;
+          let template = Handlebars.compile(source);
+          let html = template(context.lyricsByFirstLetterOfTitle[contentKey][contentIndex]);
 
           document.querySelector("#lyrics-content").innerHTML = html;
         }
@@ -27,11 +27,11 @@ var context = {};
         var matches = [];
         var titles = [];
 
-        for (var i = 0; i < numberOfSongs; i++) {
+        for (let i = 0; i < numberOfSongs; i++) {
           // some tidying up so case and apostophes won't cause problems.
-          var titleForSearch = lyrics[i].title.replace(/['’]/g, "").toUpperCase();
-          var lyricsForSearch = lyrics[i].body.replace(/['’]/g, "").toUpperCase();
-          var modifiedSearchString = searchString.replace(/[’']/g, "").toUpperCase();
+          let titleForSearch = lyrics[i].title.replace(/['’]/g, "").toUpperCase();
+          let lyricsForSearch = lyrics[i].body.replace(/['’]/g, "").toUpperCase();
+          let modifiedSearchString = searchString.replace(/[’']/g, "").toUpperCase();
 
           //if we haven't already added this title to the list.
           if (titles.indexOf(lyrics[i].title) === -1) {
@@ -47,8 +47,8 @@ var context = {};
 
         // to get everything alphbetical might help users
         matches.sort(function(one, theOther) {
-          var oneTitle = one.title.toUpperCase();
-          var theOtherTitle = theOther.title.toUpperCase();
+          let oneTitle = one.title.toUpperCase();
+          let theOtherTitle = theOther.title.toUpperCase();
 
           if (oneTitle < theOtherTitle) {
             return -1;
@@ -73,10 +73,10 @@ var context = {};
       }
 
       function storeLyricsByLetter(arrayOfLyricObjects) {
-        var lyricsByFirstLetterOfTitle = {};
+        let lyricsByFirstLetterOfTitle = {};
 
         arrayOfLyricObjects.forEach(function(lyric) {
-          var letterKey = lyric.title.charAt(0);
+          let letterKey = lyric.title.charAt(0);
 
           if (!lyricsByFirstLetterOfTitle[letterKey]) {
             lyricsByFirstLetterOfTitle[letterKey] = [];
@@ -121,7 +121,7 @@ var context = {};
       }
 
       function showResults(delay) {
-        var theDelay = delay || 700;
+        let theDelay = delay || 700;
         document.querySelector(".results-found").classList.remove("show");
         setTimeout(function() {
           document.querySelector(".results-found").classList.add("show");
@@ -133,19 +133,19 @@ var context = {};
       }
 
       function runSearch() {
-        var searchString = document.querySelector("input[name=search-box]").value;
+        let searchString = document.querySelector("input[name=search-box]").value;
         filterSongs(searchString);
       }
 
       function addLyricEventListeners() {
-        var closer = document.querySelector(".closer");
+        let closer = document.querySelector(".closer");
 
         closer.addEventListener("click", function(event) {
           hideSong();
         });
         console.log("added closer listener");
 
-        var lyricModal = document.querySelector(".lyric-content");
+        let lyricModal = document.querySelector(".lyric-content");
 
         lyricModal.addEventListener("click", function(event) {
           event.stopPropagation();
@@ -157,14 +157,14 @@ var context = {};
         }, 200);
       }
 
-      var clickOutside = function(event) {
+      let clickOutside = function(event) {
         if (event.target.tagName !== "BUTTON") {
           hideSong();
         }
       };
 
       function hideSong() {
-        var lastShownDiv = document.querySelector(".lyric-display");
+        let lastShownDiv = document.querySelector(".lyric-display");
         lastShownDiv.classList.remove("show");
 
         // we should clear this between songs so that body height returns to normal.
@@ -180,7 +180,7 @@ var context = {};
         hideResults();
         context.lastScrollPos = window.pageYOffset;
         pushHandlebars("song", lyricsIndex, letterKey);
-        var songDiv = document.querySelector(".lyric-display");
+        let songDiv = document.querySelector(".lyric-display");
         setTimeout(function() {
           songDiv.classList.add("show");
           window.scrollTo(0, 0);

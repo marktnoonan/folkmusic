@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lyrics search</title>
-    <link rel="stylesheet" href="./lyrics.css" />
-  </head>
-  <body>
-    <div class="bodyHide"></div>
-    <div id="lyrics-navigation" class="lyrics-navigation">
-      <input
-        type="text"
-        name="search-box"
-        class="wsite-form-input wsite-input wsite-input-width-370px"
-        value=""
-        placeholder="Enter lyric or title"
-      />
 
-      <input
-        type="button"
-        name="search-button"
-        class="wsite-button"
-        style="padding: 7px 15px; text-transform: uppercase !important; letter-spacing: 1px !important;border: 0; height: 38px; margin-bottom: 10px"
-        value="Search"
-      />
-      <input
-        type="button"
-        name="show-all-button"
-        class="wsite-button"
-        style="padding: 7px 15px; text-transform: uppercase !important; letter-spacing: 1px !important;border: 0; height: 38px; margin-bottom: 10px"
-        value="List All Songs"
-      />
-    </div>
-    <div id="spinner-place"></div>
-    <div id="lyrics-titles"></div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Lyrics search</title>
+	<link rel="stylesheet" href="./lyrics.css" />
+</head>
 
-    <div id="lyrics-content"></div>
+<body>
+	<div class="bodyHide"></div>
+	<div id="lyrics-navigation" class="lyrics-navigation">
+		<input type="text" name="search-box" class="wsite-form-input wsite-input wsite-input-width-370px" value=""
+			placeholder="Enter lyric or title" />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"
-    ></script>
-    <script id="lyrics-results-template" type="text/x-handlebars-template">
-      <div class="results-found">
+		<input type="button" name="search-button" class="wsite-button"
+			style="padding: 7px 15px; text-transform: uppercase !important; letter-spacing: 1px !important;border: 0; height: 38px; margin-bottom: 10px"
+			value="Search" />
+		<input type="button" name="show-all-button" class="wsite-button"
+			style="padding: 7px 15px; text-transform: uppercase !important; letter-spacing: 1px !important;border: 0; height: 38px; margin-bottom: 10px"
+			value="List All Songs" />
+	</div>
+	<div id="spinner-place"></div>
+	<div id="lyrics-titles"></div>
+
+	<div id="lyrics-content"></div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js">
+	</script>
+	<script id="lyrics-results-template" type="text/x-handlebars-template">
+		<div class="results-found">
         {{numberOfResults}} song{{#if plural}}s{{/if}} found {{#if searchString}}containing "{{searchString}}."{{/if}}
         {{#each lyricsByFirstLetterOfTitle as |val letter|}}
           <span class="letter">{{@key}}</span>
@@ -54,8 +41,8 @@
       </div>
     </script>
 
-    <script id="lyrics-content-template" type="text/x-handlebars-template">
-      <div class="lyric-display" id="display{{nid}}">
+	<script id="lyrics-content-template" type="text/x-handlebars-template">
+		<div class="lyric-display" id="display{{nid}}">
         <div class="lyric-content">
           <!-- this is the X for closing a lyric -->
           <span class="closer" data-lyric-id="display{{nid}}">×</span>
@@ -76,7 +63,8 @@
       </div>
     </script>
 
-    <script src="./lyricsjson.js"></script>
-    <script src="./lyrics-logic.js"></script>
-  </body>
+	<script src="./lyricsjson.js"></script>
+	<script src="./lyrics-logic.js"></script>
+</body>
+
 </html>

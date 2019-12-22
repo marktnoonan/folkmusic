@@ -1,5 +1,5 @@
 
-var lyrics = [{
+const lyrics = [{
     "nid": "14",
     "title": "Signs of the Times",
     "album":["Signs of the Times"],
