@@ -139,11 +139,18 @@ var context = {};
 
       function addLyricEventListeners() {
         let closer = document.querySelector(".closer");
-
+        
+        //closes song modal with clicking on "x"
         closer.addEventListener("click", function(event) {
           hideSong();
+        })
+
+        //closes song modal with pressing on the Escape key
+        window.addEventListener('keyup', event => {
+          if(event.key === 'Escape' || event.keyCode === 27) {
+            hideSong();
+          }
         });
-        console.log("added closer listener");
 
         let lyricModal = document.querySelector(".lyric-content");
 
