@@ -2435,10 +2435,17 @@ textarea {
 	padding: 0;
 	float: right;
 	font-size: 2em;
-	cursor: pointer;
-	transition: all 100ms ease-in;
-	color: #777;
+	display: inline-block;
+	border: none;
+	color: white;
+	background-color: transparent;
+	margin: 0;
 	transform: scale(1.1);
+	cursor: pointer;
+	transition: background 250ms ease-in-out, 
+				transform 150ms ease;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 .closer:hover {
@@ -2475,6 +2482,7 @@ input[type="button"] {
 	background-color: transparent;
 	margin: 0;
 	text-decoration: none;
+	/* font-family: sans-serif; */
 	font-size: 1rem;
 	cursor: pointer;
 	text-align: right;
