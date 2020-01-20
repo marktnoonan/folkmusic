@@ -2469,6 +2469,21 @@ input[type="button"] {
 	font-weight: 700;
 	cursor: pointer;
 	display: inline-block;
+	/* Imported Code === No style */
+	display: inline-block;
+	border: none;
+	color: white;
+	background-color: transparent;
+	margin: 0;
+	text-decoration: none;
+	/* font-family: sans-serif; */
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: right;
+	transition: background 250ms ease-in-out, 
+				transform 150ms ease;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 @media (max-width: 500px) {
@@ -2605,3 +2620,5 @@ div.paragraph ol,
 div.paragraph ol li {
 	list-style: decimal outside !important;
 }
+
+

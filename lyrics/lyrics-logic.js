@@ -27,7 +27,7 @@ var context = {};
         var matches = [];
         var titles = [];
 
-        for (let i = 0; i < numberOfSongs; i++) {
+        for(let i = 0; i < numberOfSongs; i++) {
           // some tidying up so case and apostophes won't cause problems.
           let titleForSearch = lyrics[i].title.replace(/['’]/g, "").toUpperCase();
           let lyricsForSearch = lyrics[i].body.replace(/['’]/g, "").toUpperCase();
@@ -45,7 +45,7 @@ var context = {};
           }
         }
 
-        // to get everything alphbetical might help users
+        // to get everything alphabetical might help users
         matches.sort(function(one, theOther) {
           let oneTitle = one.title.toUpperCase();
           let theOtherTitle = theOther.title.toUpperCase();

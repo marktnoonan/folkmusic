@@ -35,7 +35,7 @@
         {{#each lyricsByFirstLetterOfTitle as |val letter|}}
           <span class="letter">{{@key}}</span>
           {{#each this}}
-            <a class="title-button" onclick="showSong({{@key}},'{{letter}}')">{{title}}{{#unless @last}}{{/unless}}</a><br>
+            <button class="title-button" onclick="showSong({{@key}},'{{letter}}')">{{title}}{{#unless @last}}{{/unless}}</button><br>
           {{/each}}<br>
         {{/each}}
       </div>
