@@ -12,7 +12,8 @@ This is a basic lyris search feature as seen on folkmusic.com. There are are var
 - [x] The escape key should close a song if one is open.
 - [x] The close button should not be a span, it should be a button element.
 - [x] The close button should receive focus when the lyrics are being shown.
-- [ ] Refactor the css ... long term goal 
+- [ ] Refactor the css ... long term goal.
+- [ ] Looking at the page (https://www.folkmusic.com/lyrics-986202.html) and wondering if the songs should be auto-loaded on load.
 
 
 To get this running locally, you should be able to open index.html and everything will be there. The CSS file contains practically all the CSS for the whole site just so stuff looks the same on this isolated version.
