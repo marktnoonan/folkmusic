@@ -195,4 +195,6 @@ function showSong(lyricsIndex, letterKey) {
 	document.querySelector('.closer').focus();
 }
 
-window.onload = addMainEventListeners;
+//Loads all the song list onload
+filterSongs('');
+showResults(1000);
