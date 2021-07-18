@@ -133,6 +133,7 @@ function hideResults() {
 
 function runSearch() {
 	let searchString = document.querySelector('input[name=search-box]').value;
+	console.log('runSearch', searchString)
 	filterSongs(searchString);
 }
 
@@ -198,3 +199,4 @@ function showSong(lyricsIndex, letterKey) {
 //Loads all the song list onload
 filterSongs('');
 showResults(1000);
+addMainEventListeners();
