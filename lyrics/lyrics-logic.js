@@ -133,7 +133,6 @@ function hideResults() {
 
 function runSearch() {
 	let searchString = document.querySelector('input[name=search-box]').value;
-	console.log('runSearch', searchString)
 	filterSongs(searchString);
 }
 
